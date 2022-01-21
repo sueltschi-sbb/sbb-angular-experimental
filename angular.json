@@ -62,6 +62,7 @@
               "projects/angular-experimental-examples/src/assets"
             ],
             "styles": [
+              "node_modules/@sbb-esta/angular/typography.css",
               "projects/angular-experimental-examples/src/styles.scss"
             ],
             "scripts": []
@@ -130,6 +131,7 @@
               "projects/angular-experimental-examples/src/assets"
             ],
             "styles": [
+              "node_modules/@sbb-esta/angular/typography.css",
               "projects/angular-experimental-examples/src/styles.scss"
             ],
             "scripts": []
