@@ -7,8 +7,8 @@
     "build": "ng build",
     "watch": "ng build angular-experimental  --watch --configuration development",
     "format:prettier": "prettier --write \"**/*.{js,ts,css,scss,json,md,html}\"",
-    "format:tslint": "yarn -s tslint --fix",
-    "format": "npm-run-all --parallel format:prettier format:tslint",
+    "format:eslint": "eslint --fix",
+    "format": "npm-run-all --parallel format:prettier format:eslint",
     "test": "ng test",
     "lint": "ng lint"
   },

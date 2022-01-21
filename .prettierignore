@@ -5,5 +5,6 @@ dist
 angular.json
 .github/*
 .vscode/*
+.angular/*
 coverage
 **/*.properties
