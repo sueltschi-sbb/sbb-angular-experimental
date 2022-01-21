@@ -7,7 +7,7 @@
       "projectType": "library",
       "root": "projects/angular-experimental",
       "sourceRoot": "projects/angular-experimental/src",
-      "prefix": "lib",
+      "prefix": "sbbx",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
