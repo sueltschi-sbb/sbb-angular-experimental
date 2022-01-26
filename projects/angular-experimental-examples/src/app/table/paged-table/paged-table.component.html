@@ -1,0 +1,22 @@
+<app-example-page title="Paged Table with Sorting" sourceCodePath="src/app/examples/paged-table">
+  <sbbx-table
+    [dataSource]="dataSource"
+    [loading]="loading"
+    [pageSize]="15"
+    sortColumn="countTrains"
+    sortDirection="desc"
+  >
+    <sbbx-column id="recordId" title="ID" width="10%"></sbbx-column>
+    <sbbx-column id="line" title="Line" width="25%" sortable></sbbx-column>
+    <sbbx-column id="from" title="From" width="20%" sortable></sbbx-column>
+    <sbbx-column id="to" title="To" width="20%" sortable></sbbx-column>
+    <sbbx-column id="year" title="Year" width="10%"></sbbx-column>
+    <sbbx-column
+      id="countTrains"
+      title="Train Count"
+      width="15%"
+      justify="right"
+      sortable
+    ></sbbx-column>
+  </sbbx-table>
+</app-example-page>

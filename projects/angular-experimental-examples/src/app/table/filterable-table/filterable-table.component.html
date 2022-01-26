@@ -1,0 +1,30 @@
+<app-example-page
+  title="Filterable Table"
+  sourceCodePath="src/app/examples/filterable-table"
+  [formGroup]="filter"
+>
+  <sbb-form-field label="Global Search">
+    <input sbbInput formControlName="_" />
+  </sbb-form-field>
+
+  <sbbx-table [dataSource]="dataSource" [pageSize]="15" noDataText="no rows match the filter">
+    <sbbx-column id="recordId" title="ID" width="10%"></sbbx-column>
+    <sbbx-column id="line" title="Line" width="25%" sortable>
+      <ng-template sbbxColumnFilter>
+        <input sbbInput formControlName="line" />
+      </ng-template>
+    </sbbx-column>
+    <sbbx-column id="from" title="From" width="20%">
+      <ng-template sbbxColumnFilter>
+        <input sbbInput formControlName="from" />
+      </ng-template>
+    </sbbx-column>
+    <sbbx-column id="to" title="To" width="20%">
+      <ng-template sbbxColumnFilter>
+        <input sbbInput formControlName="to" />
+      </ng-template>
+    </sbbx-column>
+    <sbbx-column id="year" title="Year" width="10%"></sbbx-column>
+    <sbbx-column id="countTrains" title="Train Count" width="15%" justify="right"></sbbx-column>
+  </sbbx-table>
+</app-example-page>

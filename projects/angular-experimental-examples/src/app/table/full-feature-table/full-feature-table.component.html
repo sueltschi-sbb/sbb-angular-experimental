@@ -1,0 +1,39 @@
+<app-example-page title="Full-Feature Table" sourceCodePath="src/app/examples/full-feature-table">
+  <sbbx-table
+    [dataSource]="dataSource"
+    [loading]="loading"
+    [pageSize]="30"
+    stickyHeader
+    sortColumn="countTrains"
+    sortDirection="desc"
+    [formGroup]="filter"
+  >
+    <sbbx-column id="recordId" title="ID" width="10%" sticky></sbbx-column>
+    <sbbx-column id="line" title="Line" width="20%" sortable>
+      <ng-template sbbxColumnFilter>
+        <input sbbInput formControlName="line" />
+      </ng-template>
+    </sbbx-column>
+    <sbbx-column id="from" title="From" width="20%" sortable>
+      <ng-template sbbxColumnFilter>
+        <input sbbInput formControlName="from" />
+      </ng-template>
+    </sbbx-column>
+    <sbbx-column id="to" title="To" width="20%" sortable>
+      <ng-template sbbxColumnFilter>
+        <input sbbInput formControlName="to" />
+      </ng-template>
+    </sbbx-column>
+    <sbbx-column id="year" title="Year" width="5%"></sbbx-column>
+    <sbbx-column id="timestamp" title="Timestamp" width="10%">
+      <ng-template sbbxColumnCell let-row>{{ row.timestamp | date: 'mediumDate' }}</ng-template>
+    </sbbx-column>
+    <sbbx-column
+      id="countTrains"
+      title="Train Count"
+      width="15%"
+      justify="right"
+      sortable
+    ></sbbx-column>
+  </sbbx-table>
+</app-example-page>

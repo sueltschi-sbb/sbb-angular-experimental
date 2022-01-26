@@ -1,0 +1,13 @@
+<app-example-page title="Formatted Table" sourceCodePath="src/app/examples/formatted-table">
+  <sbbx-table [dataSource]="dataSource">
+    <sbbx-column id="recordId" title="ID" width="10%" headerClass="record-header"></sbbx-column>
+    <sbbx-column id="line" title="Line" width="25%" cellClass="line-cell"></sbbx-column>
+    <sbbx-column id="from" title="From" subtitle="origin" width="20%"></sbbx-column>
+    <sbbx-column id="to" title="To" subtitle="destination" width="20%"></sbbx-column>
+    <sbbx-column id="year" title="Year" width="10%"></sbbx-column>
+    <sbbx-column id="timestamp" title="Date" width="15%" justify="right">
+      <ng-template sbbxColumnHeader>📅 Date</ng-template>
+      <ng-template sbbxColumnCell let-row>📅 {{ row.timestamp | date: 'mediumDate' }}</ng-template>
+    </sbbx-column>
+  </sbbx-table>
+</app-example-page>

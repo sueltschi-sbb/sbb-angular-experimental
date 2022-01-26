@@ -1,5 +1,31 @@
-<h1>Angular Experimental Examples</h1>
+<sbb-header-lean label="sbb-angular-experimental">
+  <sbb-header-environment>dev</sbb-header-environment>
+</sbb-header-lean>
 
-<sbbx-angular-experimental></sbbx-angular-experimental>
-
-<router-outlet></router-outlet>
+<sbb-icon-sidebar-container>
+  <sbb-icon-sidebar>
+    <a sbbIconSidebarItem label="Tables" routerLink="/">
+      <sbb-icon svgIcon="kom:station-small"></sbb-icon>
+    </a>
+  </sbb-icon-sidebar>
+  <sbb-icon-sidebar-content role="main">
+    <sbb-sidebar-container>
+      <sbb-sidebar role="navigation">
+        <sbb-expansion-panel expanded>
+          <sbb-expansion-panel-header>Tables</sbb-expansion-panel-header>
+          <a sbbSidebarLink routerLink="/table/simple">Simple Table</a>
+          <a sbbSidebarLink routerLink="/table/paged">Paged Sorted Table</a>
+          <a sbbSidebarLink routerLink="/table/grouped">Grouped Table</a>
+          <a sbbSidebarLink routerLink="/table/formatted">Formatted Table</a>
+          <a sbbSidebarLink routerLink="/table/filterable">Filterable Table</a>
+          <a sbbSidebarLink routerLink="/table/sticky">Sticky Table</a>
+          <a sbbSidebarLink routerLink="/table/full">Full-Feature Table</a>
+          <a sbbSidebarLink routerLink="/table/remote">Remote Table</a>
+        </sbb-expansion-panel>
+      </sbb-sidebar>
+      <sbb-sidebar-content role="main">
+        <router-outlet></router-outlet>
+      </sbb-sidebar-content>
+    </sbb-sidebar-container>
+  </sbb-icon-sidebar-content>
+</sbb-icon-sidebar-container>

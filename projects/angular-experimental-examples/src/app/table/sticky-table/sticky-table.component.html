@@ -1,0 +1,10 @@
+<app-example-page title="Sticky Table" sourceCodePath="src/app/examples/sticky-table">
+  <sbbx-table [dataSource]="dataSource" [pageSize]="30" stickyHeader>
+    <sbbx-column id="recordId" title="ID" width="10%" sticky></sbbx-column>
+    <sbbx-column id="line" title="Line" width="25%"></sbbx-column>
+    <sbbx-column id="from" title="From" width="20%"></sbbx-column>
+    <sbbx-column id="to" title="To" width="20%"></sbbx-column>
+    <sbbx-column id="countTrains" title="Train Count" width="15%" justify="right"></sbbx-column>
+    <sbbx-column id="year" title="Year" width="10%" stickyEnd></sbbx-column>
+  </sbbx-table>
+</app-example-page>

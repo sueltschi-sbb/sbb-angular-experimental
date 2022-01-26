@@ -1,0 +1,10 @@
+<app-example-page title="Simple Table" sourceCodePath="src/app/examples/simple-table">
+  <sbbx-table [dataSource]="dataSource" (rowClick)="handleRowClick($event)">
+    <sbbx-column id="recordId" title="ID" width="10%"></sbbx-column>
+    <sbbx-column id="line" title="Line" width="25%"></sbbx-column>
+    <sbbx-column id="from" title="From" width="20%"></sbbx-column>
+    <sbbx-column id="to" title="To" width="20%"></sbbx-column>
+    <sbbx-column id="year" title="Year" width="10%"></sbbx-column>
+    <sbbx-column id="countTrains" title="Train Count" width="15%" justify="right"></sbbx-column>
+  </sbbx-table>
+</app-example-page>

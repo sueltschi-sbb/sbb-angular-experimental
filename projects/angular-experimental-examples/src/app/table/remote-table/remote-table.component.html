@@ -1,0 +1,26 @@
+<app-example-page title="Remote Table" sourceCodePath="src/app/examples/remote-table">
+  <sbb-search (search)="handleSearch($event)">
+    <input sbbInput placeholder="Search by ID, Line, From, To" />
+  </sbb-search>
+
+  <sbbx-table
+    [dataSource]="dataSource"
+    [pageSize]="25"
+    stickyHeader
+    sortColumn="countTrains"
+    sortDirection="desc"
+  >
+    <sbbx-column id="recordId" title="ID" width="10%" sticky></sbbx-column>
+    <sbbx-column id="line" title="Line" width="20%" sortable></sbbx-column>
+    <sbbx-column id="from" title="From" width="20%" sortable></sbbx-column>
+    <sbbx-column id="to" title="To" width="20%" sortable></sbbx-column>
+    <sbbx-column id="year" title="Year" width="10%"></sbbx-column>
+    <sbbx-column
+      id="countTrains"
+      title="Train Count"
+      width="20%"
+      justify="right"
+      sortable
+    ></sbbx-column>
+  </sbbx-table>
+</app-example-page>
